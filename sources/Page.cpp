@@ -91,16 +91,16 @@ using namespace ariel;
                     }
                   d++;
                 }
-                for(unsigned long i=0; i < std.length(); i++){
-                    if(Page::_p[r][col] != '_'  || Page::_p[r][col] == '~'  ){
-                        throw invalid_argument("Invalid place 222");
+            for(unsigned long i=0; i < std.length(); i++){
+                if(Page::_p[r][col] != '_'  || Page::_p[r][col] == '~'  ){
+                    throw invalid_argument("Invalid place 222");
 
-                    }
-                    Page::_p[r][col] = std[i];    
-                   
-                   r++;
                 }
+                Page::_p[r][col] = std[i];    
+                   
+                r++;
             }
+        }
         }
    
 
@@ -161,11 +161,13 @@ using namespace ariel;
         }
     }
 
-    void Page::printPage(int row){
+    string Page::printPage(int row){
+        string s;
         for(int i= row; i < maxLenRowToPrint; i++){
             for (int j = 0; j < maxLenRowToPrint; j++){
-                cout << "" << Page::_p[row][j] <<  endl;
+               s+= Page::_p[row][j];
             }
-            cout << "/n"<< endl;
-        }   
+           s+= "/n";
+        }
+        return s;   
     }
