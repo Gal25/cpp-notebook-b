@@ -28,8 +28,7 @@ using namespace ariel;
             string see(int row, int col, Direction dir, int numToRead); //read on the specific place in the page
             void  del(int row, int col, Direction dir, int len); // delete on the specific place in the page
 
-            void  printPage(int row); // print all the page
+            string  printPage(int row); // print all the page
 
 
     };
-
