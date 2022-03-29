@@ -83,12 +83,6 @@ using namespace ariel;
            if (page < 0){
             throw invalid_argument("Invalid page");
         }
-        for (int i = 0; i < _pages.size(); i++){
-            if(page == i){
-                _pages[page].printPage(maxRow);
-            }
-    
-        }
-    }
 
- 
+        _pages[page].printPage(maxRow);
+    }
